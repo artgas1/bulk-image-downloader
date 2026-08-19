@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Image Downloader — save all images from a page in one click</title>
+<meta name="description" content="A free bulk image downloader for Chrome. Find every image on a web page, filter by format, width and height, and download them all in one click. No signup, no ads, no tracking.">
+<link rel="icon" href="img/icon.png">
+<link rel="stylesheet" href="style.css">
+<meta property="og:title" content="Image Downloader — save all images from a page in one click">
+<meta property="og:description" content="Find every image on a web page and bulk download them. Free, no signup, no tracking.">
+<meta property="og:image" content="img/popup.png">
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <img src="img/icon.png" alt="Image Downloader">
+    <b>Image Downloader</b>
+    <span class="spacer"></span>
+    <a href="welcome.html">Getting started</a>
+    <a href="#how">How it works</a>
+    <a href="#faq">FAQ</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="https://github.com/artgas1/bulk-image-downloader/issues">Support</a>
+  </nav>
+
+  <section class="hero">
+    <div>
+      <h1>Save every image on the page. In one click.</h1>
+      <p class="lede">A bulk image downloader for Chrome that finds what the page really loaded — including lazy-loaded pictures and CSS background images — then saves the ones you pick into a folder named after the site.</p>
+      <div class="cta">
+        <a class="btn" href="#install">Get the extension</a>
+        <a class="btn ghost" href="#how">See how it works</a>
+      </div>
+      <p class="note" style="margin-top:16px">Free · No account · No ads · No tracking</p>
+    </div>
+    <div><img class="shot" src="img/popup.png" alt="The Image Downloader popup showing a grid of photos found on a page"></div>
+  </section>
+
+  <h2 class="section">What it does differently</h2>
+  <p class="sub">Three things break most image downloaders. This one was built around them.</p>
+  <div class="grid">
+    <div class="card">
+      <h3>Full size, not the preview</h3>
+      <p>Pages publish several versions of one photo and show the smallest. The scanner reads the whole srcset list and every source tag, so the larger file is the one you get.</p>
+    </div>
+    <div class="card">
+      <h3>Pictures below the fold</h3>
+      <p>Long galleries load as you scroll. Auto-scroll walks the page to the bottom first, waits for images to render, scrolls back, and only then scans.</p>
+    </div>
+    <div class="card">
+      <h3>CSS background images</h3>
+      <p>Banners and tiles are often painted through CSS, invisible to tag-only scanners. Those are collected too, along with images inside embedded frames.</p>
+    </div>
+  </div>
+
+  <h2 class="section" id="how">Three steps</h2>
+  <div class="steps">
+    <div class="step"><div class="n">1</div><h3>Click the icon</h3><p>On any page. The grid builds itself in a couple of seconds, sorted largest first.</p></div>
+    <div class="step"><div class="n">2</div><h3>Untick what you skip</h3><p>Everything is pre-selected. Filter by format, minimum width and minimum height.</p></div>
+    <div class="step"><div class="n">3</div><h3>Download</h3><p>Files land in a folder named after the site, numbered in order, ready to use.</p></div>
+  </div>
+
+  <div style="margin-top:34px"><img class="shot" src="img/folder.png" alt="A downloads folder holding 32 images saved from one page"></div>
+
+  <h2 class="section">Filters that skip the junk</h2>
+  <div class="grid">
+    <div class="card"><h3>By format</h3><p>JPG, PNG, WebP, GIF, SVG and AVIF. Keep only what your editor accepts, or convert WebP and AVIF to JPG while saving.</p></div>
+    <div class="card"><h3>By size</h3><p>Minimum width and height in pixels, so a large batch stays dimensionally consistent.</p></div>
+    <div class="card"><h3>By noise</h3><p>Icons under 150px, avatars, logos, sprite sheets, tracking pixels, spinners and emoji are hidden by default.</p></div>
+  </div>
+
+  <h2 class="section" id="install">Install</h2>
+  <p class="sub">The extension is being published to the Chrome Web Store. The button below will point at the listing as soon as review is finished.</p>
+  <div class="cta">
+    <a class="btn" href="https://chromewebstore.google.com/" rel="noopener">Chrome Web Store</a>
+    <a class="btn ghost" href="https://github.com/artgas1/bulk-image-downloader/issues">Report an issue</a>
+  </div>
+
+  <h2 class="section" id="faq">FAQ</h2>
+  <div class="faq">
+    <details open><summary>Does it send anything anywhere?</summary><p>No. There is no server and no analytics. Image URLs live in memory while the popup is open, and your settings stay in local browser storage. See the <a href="privacy.html">privacy policy</a>.</p></details>
+    <details><summary>Will I get full-resolution files?</summary><p>It takes the largest version the page publishes in srcset or source. Where a page only ever offers a preview, the preview is all that exists.</p></details>
+    <details><summary>Why is an image missing from the grid?</summary><p>Broken and hotlink-protected files are dropped automatically, and the tiny-icon filter hides small graphics. Turn that filter off to list them again.</p></details>
+    <details><summary>Does it work on social networks?</summary><p>It saves what the page hands to the browser. It does not reach into protected platform APIs, and it does not bypass paywalls, DRM or watermarks.</p></details>
+    <details><summary>Why does Chrome ask where to save every file?</summary><p>That is a Chrome setting, not the extension. Turn off <em>Ask where to save each file</em> in Chrome Settings → Downloads and batches will save silently.</p></details>
+  </div>
+
+  <footer class="site">
+    <span>© 2026 Image Downloader</span>
+    <a href="privacy.html">Privacy policy</a>
+    <a href="https://github.com/artgas1/bulk-image-downloader/issues">Support</a>
+  </footer>
+</div>
+</body>
+</html>

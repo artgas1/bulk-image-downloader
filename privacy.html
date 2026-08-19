@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Image Downloader</title>
+<meta name="description" content="Privacy policy for the Image Downloader Chrome extension. No data collection, no telemetry, no accounts.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="doc">
+<header class="doc-head">
+  <a class="back" href="./">← Image Downloader</a>
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: 19 August 2026</p>
+</header>
+
+<main class="doc-body">
+  <section class="callout">
+    <h2>The short version</h2>
+    <p><strong>Image Downloader does not collect, store, or transmit any user data.</strong> The extension runs entirely inside your browser. There is no server, no account, no analytics, no telemetry, and no advertising code.</p>
+  </section>
+
+  <h2>What the extension does</h2>
+  <p>When you click the extension icon on a web page:</p>
+  <ol>
+    <li>It injects a scanner script into that one page to find images — <code>img</code> elements, <code>srcset</code> candidates, <code>source</code> tags, CSS <code>background-image</code> declarations, and links pointing at image files.</li>
+    <li>It shows what it found as a thumbnail grid in the popup.</li>
+    <li>If you select images and press Download, it hands those URLs to Chrome's own download manager, which saves the files to your computer.</li>
+  </ol>
+  <p>That is the whole flow. The extension does not read page text, form values, cookies, passwords, or any other page content.</p>
+
+  <h2>Data stored on your device</h2>
+  <p>The extension uses <code>chrome.storage.local</code> to remember, on your machine only:</p>
+  <ul>
+    <li>Your toggle settings — auto-scroll, hide tiny icons, ALT text as filename, convert WebP/AVIF to JPG</li>
+    <li>Your filter values — format, minimum width, minimum height</li>
+    <li>Local counters, such as how many times you ran a scan, shown to nobody but you</li>
+  </ul>
+  <p>This data never leaves your device, is never sent anywhere, and is not tied to any identifier. Uninstalling the extension deletes it.</p>
+
+  <h2>What we do not do</h2>
+  <ul class="nope">
+    <li>No accounts, no signup, no login</li>
+    <li>No analytics, no telemetry, no crash reporting</li>
+    <li>No advertising, no affiliate links, no sponsored content</li>
+    <li>No third-party SDKs or trackers of any kind</li>
+    <li>No selling, sharing, or transferring of data — we hold none to sell</li>
+    <li>No reading of any page unless you click the extension icon on it</li>
+  </ul>
+
+  <h2>Permissions, and why each one exists</h2>
+  <table>
+    <tr><th>Permission</th><th>Why it is needed</th></tr>
+    <tr><td><code>activeTab</code></td><td>To scan the page you opened the extension on. Access is scoped to that tab and granted only when you click the icon.</td></tr>
+    <tr><td><code>scripting</code></td><td>To inject the image-scanner script into that tab.</td></tr>
+    <tr><td><code>downloads</code></td><td>To save the images you selected through Chrome's download manager.</td></tr>
+    <tr><td><code>storage</code></td><td>To remember your filter and toggle preferences locally.</td></tr>
+    <tr><td><code>host permissions</code></td><td>Set to all sites so the extension can work on any page you choose. It still reads a page only after you click its icon.</td></tr>
+  </table>
+
+  <h2>Image data</h2>
+  <p>Image URLs and dimensions found on a page live in memory while the popup is open and are discarded when it closes. They are never logged, transmitted, or stored.</p>
+
+  <h2>Image conversion</h2>
+  <p>If you enable WebP/AVIF to JPG conversion, the extension fetches the image bytes and re-encodes them locally, inside your browser, using an offscreen canvas. Nothing is uploaded to any service for conversion.</p>
+
+  <h2>Children</h2>
+  <p>The extension collects no data from anyone, including children under 13.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If this policy ever changes, the new version will appear at this same URL with an updated date above.</p>
+
+  <h2>Contact</h2>
+  <p>Questions or concerns: open an issue at <a href="https://github.com/artgas1/bulk-image-downloader/issues">github.com/artgas1/bulk-image-downloader/issues</a>.</p>
+</main>
+
+<footer class="doc-foot"><a href="./">Image Downloader</a> · <a href="./privacy.html">Privacy</a> · <a href="https://github.com/artgas1/bulk-image-downloader/issues">Support</a></footer>
+</body>
+</html>
